@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BDa-tR-tY9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller - Goose Watch-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-ae-xgN">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="refresh" id="3TD-4G-TMG"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewt-ZC-ark"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jc2-ae-xgN" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="7JO-et-WKJ"/>
+                            <constraint firstItem="Ewt-ZC-ark" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Mb3-NF-mPQ"/>
+                            <constraint firstItem="Ewt-ZC-ark" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="NPN-45-dG1"/>
+                            <constraint firstItem="Ewt-ZC-ark" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="bkf-4y-PVp"/>
+                            <constraint firstItem="Jc2-ae-xgN" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mYe-xG-bD1"/>
+                            <constraint firstItem="Jc2-ae-xgN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="rH5-fy-yz5"/>
+                            <constraint firstItem="Ewt-ZC-ark" firstAttribute="bottom" secondItem="Jc2-ae-xgN" secondAttribute="top" type="default" id="x5c-QX-YXC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Goose Watch" id="ArH-KD-eiS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="664" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fXo-pp-aTW">
+            <objects>
+                <navigationController id="BDa-tR-tY9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1F-cz-uYy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Q5O-Co-yA8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vdl-qa-1UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="99"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
