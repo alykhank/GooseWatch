@@ -14,7 +14,11 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-ae-xgN">
                                 <items>
-                                    <barButtonItem style="plain" systemItem="refresh" id="3TD-4G-TMG"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="3TD-4G-TMG">
+                                        <connections>
+                                            <action selector="refreshPressed:" destination="2" id="u1V-6W-kKE"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewt-ZC-ark"/>
@@ -31,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goose Watch" id="ArH-KD-eiS"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ewt-ZC-ark" id="K6x-oJ-HXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,6 +65,10 @@
     <classes>
         <class className="GooseWatchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GooseWatchViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
