@@ -24,7 +24,7 @@
         NSDictionary *results = [NSJSONSerialization JSONObjectWithData:sightingsData options:kNilOptions error:&parseError];
         if (parseError) NSLog(@"[%@ %@] JSON Error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), parseError.localizedDescription);
         
-        NSLog(@"Response: %@", results);
+//        NSLog(@"Response: %@", results);
         return [[[results objectForKey:@"response"] objectForKey:@"data"] objectForKey:@"result"];
     }
     else return nil;

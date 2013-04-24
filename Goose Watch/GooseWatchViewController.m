@@ -67,11 +67,19 @@
 }
 
 - (IBAction)refreshPressed:(UIBarButtonItem *)sender {
-    self.sightings = [GooseWatch retrieveSightings];
-    NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:self.sightings.count];
-    for (NSDictionary *sighting in self.sightings) {
-        [annotations addObject:[SightingAnnotation annotationForSighting:sighting]];
-    }
-    self.annotations = annotations;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    dispatch_queue_t downloadQueue = dispatch_queue_create("GooseWatch Queue", NULL);
+    dispatch_async(downloadQueue, ^{
+        NSArray *sightings = [GooseWatch retrieveSightings];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            self.sightings = sightings;
+            NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:self.sightings.count];
+            for (NSDictionary *sighting in self.sightings) {
+                [annotations addObject:[SightingAnnotation annotationForSighting:sighting]];
+            }
+            self.annotations = annotations;
+        });
+    });
 }
 @end
