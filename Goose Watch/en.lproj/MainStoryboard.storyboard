@@ -16,7 +16,7 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="refresh" id="3TD-4G-TMG">
                                         <connections>
-                                            <action selector="refreshPressed:" destination="2" id="u1V-6W-kKE"/>
+                                            <action selector="refreshPressed:" destination="2" id="sLU-k8-9LN"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

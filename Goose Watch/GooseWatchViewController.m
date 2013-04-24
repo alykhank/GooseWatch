@@ -45,28 +45,10 @@
     if (self.annotations) [self.mapView addAnnotations:self.annotations];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)refresh
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)refreshPressed:(UIBarButtonItem *)sender {
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(43.4722, -80.5472), 1500, 1500);
+    [self.mapView setRegion:region animated:YES];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     dispatch_queue_t downloadQueue = dispatch_queue_create("GooseWatch Queue", NULL);
     dispatch_async(downloadQueue, ^{
@@ -81,5 +63,31 @@
             self.annotations = annotations;
         });
     });
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    [self refresh];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)refreshPressed:(UIBarButtonItem *)sender {
+    [self refresh];
 }
 @end
