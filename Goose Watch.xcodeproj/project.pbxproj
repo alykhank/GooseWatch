@@ -19,6 +19,8 @@
 		F5CC959617277A95006D5D48 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CC959417277A95006D5D48 /* MainStoryboard.storyboard */; };
 		F5CC95A417277C62006D5D48 /* GooseWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC95A317277C62006D5D48 /* GooseWatchViewController.m */; };
 		F5CC95A817277D8C006D5D48 /* GooseWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC95A717277D8B006D5D48 /* GooseWatch.m */; };
+		F5CC95AA17277F5D006D5D48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CC95A917277F5D006D5D48 /* MapKit.framework */; };
+		F5CC95AD1727827B006D5D48 /* SightingAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC95AC1727827B006D5D48 /* SightingAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		F5CC95A517277D0A006D5D48 /* OpenDataAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDataAPIKey.h; sourceTree = "<group>"; };
 		F5CC95A617277D8B006D5D48 /* GooseWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooseWatch.h; sourceTree = "<group>"; };
 		F5CC95A717277D8B006D5D48 /* GooseWatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooseWatch.m; sourceTree = "<group>"; };
+		F5CC95A917277F5D006D5D48 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F5CC95AB1727827B006D5D48 /* SightingAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SightingAnnotation.h; sourceTree = "<group>"; };
+		F5CC95AC1727827B006D5D48 /* SightingAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SightingAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CC95AA17277F5D006D5D48 /* MapKit.framework in Frameworks */,
 				F5CC957D17277A95006D5D48 /* UIKit.framework in Frameworks */,
 				F5CC957F17277A95006D5D48 /* Foundation.framework in Frameworks */,
 				F5CC958117277A95006D5D48 /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +66,7 @@
 		F5CC957017277A95006D5D48 = {
 			isa = PBXGroup;
 			children = (
+				F5CC95A917277F5D006D5D48 /* MapKit.framework */,
 				F5CC958217277A95006D5D48 /* Goose Watch */,
 				F5CC957B17277A95006D5D48 /* Frameworks */,
 				F5CC957A17277A95006D5D48 /* Products */,
@@ -92,6 +99,8 @@
 				F5CC95A517277D0A006D5D48 /* OpenDataAPIKey.h */,
 				F5CC95A617277D8B006D5D48 /* GooseWatch.h */,
 				F5CC95A717277D8B006D5D48 /* GooseWatch.m */,
+				F5CC95AB1727827B006D5D48 /* SightingAnnotation.h */,
+				F5CC95AC1727827B006D5D48 /* SightingAnnotation.m */,
 				F5CC959417277A95006D5D48 /* MainStoryboard.storyboard */,
 				F5CC95A217277C62006D5D48 /* GooseWatchViewController.h */,
 				F5CC95A317277C62006D5D48 /* GooseWatchViewController.m */,
@@ -184,6 +193,7 @@
 				F5CC958D17277A95006D5D48 /* AppDelegate.m in Sources */,
 				F5CC95A417277C62006D5D48 /* GooseWatchViewController.m in Sources */,
 				F5CC95A817277D8C006D5D48 /* GooseWatch.m in Sources */,
+				F5CC95AD1727827B006D5D48 /* SightingAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
