@@ -37,6 +37,7 @@
 		F5CC959517277A95006D5D48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F5CC95A217277C62006D5D48 /* GooseWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooseWatchViewController.h; sourceTree = "<group>"; };
 		F5CC95A317277C62006D5D48 /* GooseWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooseWatchViewController.m; sourceTree = "<group>"; };
+		F5CC95A517277D0A006D5D48 /* OpenDataAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDataAPIKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 			children = (
 				F5CC958B17277A95006D5D48 /* AppDelegate.h */,
 				F5CC958C17277A95006D5D48 /* AppDelegate.m */,
+				F5CC95A517277D0A006D5D48 /* OpenDataAPIKey.h */,
 				F5CC959417277A95006D5D48 /* MainStoryboard.storyboard */,
 				F5CC95A217277C62006D5D48 /* GooseWatchViewController.h */,
 				F5CC95A317277C62006D5D48 /* GooseWatchViewController.m */,
