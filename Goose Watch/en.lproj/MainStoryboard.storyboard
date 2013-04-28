@@ -37,6 +37,7 @@
                     <navigationItem key="navigationItem" title="Goose Watch" id="ArH-KD-eiS"/>
                     <connections>
                         <outlet property="mapView" destination="Ewt-ZC-ark" id="K6x-oJ-HXu"/>
+                        <outlet property="toolbar" destination="Jc2-ae-xgN" id="cHw-Yp-DiY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -68,6 +69,7 @@
             <relationships>
                 <relationship kind="action" name="refreshPressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
